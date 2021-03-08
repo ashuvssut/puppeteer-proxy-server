@@ -4,7 +4,7 @@
   "description": "Proxy server for connecting to the Interent via JioNet Wi-Fi",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
