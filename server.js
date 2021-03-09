@@ -8,7 +8,7 @@ const port = 31337;
 app.listen(port, () => console.log(`listening on ${port} bro`));
 
 app.all("/", async (req, res) => {
-  console.log(req);
+  // console.log(req);
   const { url } = req.query;
   console.log(url);
 
@@ -17,7 +17,13 @@ app.all("/", async (req, res) => {
   } else {
     // puppeteer screenshot
     try {
-      const browser = await puppeteer.launch();
+
+      // const browser = await puppeteer.launch();
+
+      // for ubuntu VM
+      const browser = await puppeteer.launch({ args: ["--no-sandbox", "--disable-setuid-sandbox"] });
+
+
       const page = await browser.newPage();
       await page.goto(`https://${url}`);
 
