@@ -1,4 +1,5 @@
-# Project JioNet-proxy
+# puppeteer-proxy-server
+
 Proxy server for connecting to the Interent
 
 ubuntu vm pupppeteer install
